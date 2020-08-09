@@ -8,7 +8,8 @@ Constraints:
 1<=n<=1000
 
 Input:
-Input indicates the tree nodes of binary tree
+Firstline consists of integer n
+Secondline indicates the tree nodes of binary tree
 
 Output:
 print  all the paths from leaf to root
@@ -16,6 +17,7 @@ print  all the paths from leaf to root
 Example:
 
 Input:
+9
 1 2 3 4 5 6 7 8 9
 
 Output:
@@ -67,7 +69,9 @@ def postorderIterative(root):
         if curr.left:
             stk.append(curr.left)
             dict[curr.left] = curr
+n=int(input())
 x=list(map(int,input().split()))
 root=None
 root=insertLevelOrder(x,root,0,len(x))
 postorderIterative(root)
+
